@@ -1,0 +1,58 @@
+{
+    "paths": {
+        "data_dir": "data",
+        "raw_data": "data/raw",
+        "processed_data": "data/processed",
+        "output": "data/output",
+        "logs": "logs"
+    },
+    "api": {
+        "polygon_key": "",
+        "tradingview_screener": "america",
+        "default_exchange": "AMEX"
+    },
+    "analysis": {
+        "lookback_days": 252,
+        "min_data_points": 126,
+        "volatility_window": 20,
+        "correlation_window": 63
+    },
+    "sector_rotation": {
+        "min_volume": 1000,
+        "min_relative_strength": 0.7,
+        "momentum_threshold": 0.5,
+        "technical_weights": {
+            "trend": 0.4,
+            "momentum": 0.3,
+            "volatility": 0.3
+        }
+    },
+    "model": {
+        "train_test_split": 0.2,
+        "random_state": 42,
+        "rf_params": {
+            "n_estimators": 200,
+            "max_depth": 12,
+            "min_samples_split": 5,
+            "min_samples_leaf": 2
+        }
+    },
+    "sectors": {
+        "XLK": "Technology",
+        "XLF": "Financials",
+        "XLE": "Energy",
+        "XLV": "Healthcare",
+        "XLP": "Consumer Staples",
+        "XLI": "Industrials",
+        "XLB": "Materials",
+        "XLU": "Utilities",
+        "XLY": "Consumer Discretionary",
+        "SMH": "Semiconductors",
+        "XRT": "Retail"
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "file_rotation": "1 week"
+    }
+}
